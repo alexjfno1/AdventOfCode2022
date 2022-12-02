@@ -1,21 +1,21 @@
-import path from "path";
-import log from "../utils/log";
-import { getFileLines } from "../utils/loadInput";
+export const calculateTotals = (input: Array<string>): Array<number> => {
+  let totals: Array<number> = [];
+  let currentCount = 0;
 
-const input = getFileLines(path.join(__dirname, "./input.txt"));
+  input.forEach((line) => {
+    const number = parseInt(line);
 
-let totals: Array<number> = [];
-let currentCount = 0;
+    if (Number.isNaN(number)) {
+      totals.push(currentCount);
+      currentCount = 0;
+    } else {
+      currentCount = currentCount + number;
+    }
+  });
 
-input.forEach((line) => {
-  const number = parseInt(line);
+  return totals;
+};
 
-  if (Number.isNaN(number)) {
-    totals.push(currentCount);
-    currentCount = 0;
-  } else {
-    currentCount = currentCount + number;
-  }
-});
-
-log(Math.max(...totals));
+export default (input: Array<string>) => {
+  return Math.max(...calculateTotals(input));
+};

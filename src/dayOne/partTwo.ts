@@ -1,24 +1,9 @@
-import path from "path";
-import log from "../utils/log";
-import { getFileLines } from "../utils/loadInput";
+import { calculateTotals } from "./partOne";
 
-const input = getFileLines(path.join(__dirname, "./input.txt"));
+export default (input: Array<string>): number => {
+  const totals = calculateTotals(input);
+  const sortedNumbers = totals.sort((a, b) => b - a);
+  const topThreeSum = sortedNumbers[0] + sortedNumbers[1] + sortedNumbers[2];
 
-let totals: Array<number> = [];
-let currentCount = 0;
-
-input.forEach((line) => {
-  const number = parseInt(line);
-
-  if (Number.isNaN(number)) {
-    totals.push(currentCount);
-    currentCount = 0;
-  } else {
-    currentCount = currentCount + number;
-  }
-});
-
-const sortedNumbers = totals.sort((a, b) => b - a);
-const topThreeSum = sortedNumbers[0] + sortedNumbers[1] + sortedNumbers[2];
-
-log(topThreeSum);
+  return topThreeSum;
+};

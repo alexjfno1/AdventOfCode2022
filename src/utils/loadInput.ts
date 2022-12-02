@@ -1,4 +1,4 @@
-import fs from "fs";
+import * as fs from "fs";
 
 export const getFileLines = (filePath: string): Array<string> => {
   const fileContents = fs.readFileSync(filePath).toString();

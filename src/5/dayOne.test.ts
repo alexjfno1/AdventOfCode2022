@@ -9,7 +9,7 @@ describe("Day one", () => {
       const exampleInput = getFileLines(
         path.join(__dirname, "./input-example.txt")
       );
-      expect(partOne(exampleInput)).toEqual(24000);
+      expect(partOne(exampleInput)).toEqual("CMZ");
     });
   });
 
@@ -18,7 +18,7 @@ describe("Day one", () => {
       const exampleInput = getFileLines(
         path.join(__dirname, "./input-example.txt")
       );
-      expect(partTwo(exampleInput)).toEqual(45000);
+      expect(partTwo(exampleInput)).toEqual('MCD');
     });
   });
 });

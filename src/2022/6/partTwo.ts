@@ -1,5 +1,5 @@
 import { findUniqueMarkerPosition } from "./partOne";
 
 export default (input: string): number => {
-  return findUniqueMarkerPosition(input, 14);
+  return findUniqueMarkerPosition(input.toString(), 14);
 };

@@ -18,7 +18,7 @@ export const findUniqueMarkerPosition = (
   input: string,
   uniqueMarkerSize: number
 ): number => {
-  const lettersArray = input.split("");
+  const lettersArray = input.toString().split("");
 
   let result = 0;
   for (let i = 0; i < lettersArray.length; i += 1) {

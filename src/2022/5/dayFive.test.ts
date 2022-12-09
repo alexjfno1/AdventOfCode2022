@@ -1,5 +1,5 @@
 import * as path from "path";
-import { getFileLines } from "../utils/loadInput";
+import { getFileLines } from "../../utils/loadInput";
 import partOne from "./partOne";
 import partTwo from "./partTwo";
 
@@ -18,7 +18,7 @@ describe("Day one", () => {
       const exampleInput = getFileLines(
         path.join(__dirname, "./input-example.txt")
       );
-      expect(partTwo(exampleInput)).toEqual('MCD');
+      expect(partTwo(exampleInput)).toEqual("MCD");
     });
   });
 });

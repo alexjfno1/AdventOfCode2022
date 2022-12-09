@@ -1,5 +1,5 @@
 import * as path from "path";
-import { getFileLines } from "../utils/loadInput";
+import { getFileLines } from "../../utils/loadInput";
 import partOne from "./partOne";
 import partTwo from "./partTwo";
 
@@ -14,11 +14,11 @@ describe("Day three", () => {
   });
 
   describe("Part two", () => {
-  it("returns the correct value for the example", () => {
-  const exampleInput = getFileLines(
-  path.join(__dirname, "./input-example.txt")
-  );
-  expect(partTwo(exampleInput)).toEqual(70);
-  });
+    it("returns the correct value for the example", () => {
+      const exampleInput = getFileLines(
+        path.join(__dirname, "./input-example.txt")
+      );
+      expect(partTwo(exampleInput)).toEqual(70);
+    });
   });
 });

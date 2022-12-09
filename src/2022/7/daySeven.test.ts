@@ -3,13 +3,13 @@ import { getFileLines } from "../../utils/loadInput";
 import partOne from "./partOne";
 import partTwo from "./partTwo";
 
-describe("Day two", () => {
+describe("Day seven", () => {
   describe("Part one", () => {
     it("returns the correct value for the example", () => {
       const exampleInput = getFileLines(
         path.join(__dirname, "./input-example.txt")
       );
-      expect(partOne(exampleInput)).toEqual(15);
+      expect(partOne(exampleInput)).toEqual(95437);
     });
   });
 
@@ -18,7 +18,7 @@ describe("Day two", () => {
       const exampleInput = getFileLines(
         path.join(__dirname, "./input-example.txt")
       );
-      expect(partTwo(exampleInput)).toEqual(12);
+      expect(partTwo(exampleInput)).toEqual(24933642);
     });
   });
 });

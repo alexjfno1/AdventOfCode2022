@@ -1,5 +1,5 @@
 import * as path from "path";
-import { getFileLines } from "../utils/loadInput";
+import { getFileLines } from "../../utils/loadInput";
 import partOne from "./partOne";
 import partTwo from "./partTwo";
 
